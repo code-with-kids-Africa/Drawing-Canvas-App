@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Canvas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-blue-100 min-h-screen flex flex-col font-sans">
+  <!-- Navbar -->
+  <nav class="w-full bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+    <h1 class="text-2xl font-extrabold text-blue-700">🎨 Drawing Canvas</h1>
+    <a href="#app" 
+       class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+      Try Now
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="flex flex-col items-center text-center px-6 py-20 flex-grow relative">
+    <div class="absolute top-10 right-10 text-6xl opacity-20">✨</div>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4 drop-shadow-md">
+      Unleash Your Creativity!
+    </h2>
+    <p class="text-lg text-gray-600 max-w-xl mb-8">
+      Draw, paint, and express yourself on our fun interactive canvas. 
+      Choose colors, change brush sizes, and bring your imagination to life.
+    </p>
+    <a href="#app" 
+       class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition text-lg">
+      Start Drawing
+    </a>
+  </header>
+
+  <!-- Drawing App -->
+  <section id="app" class="flex flex-col items-center justify-center py-16 bg-white shadow-inner rounded-t-3xl">
+    <h3 class="text-3xl font-bold text-gray-800 mb-6">Your Canvas</h3>
+
+    <canvas id="canvas" width="600" height="400" 
+      class="border-4 border-gray-700 rounded-lg shadow-lg bg-white cursor-crosshair">
+    </canvas>
+    
+    <div class="controls mt-6 flex flex-wrap justify-center items-center gap-6">
+      <label class="flex items-center gap-2 text-gray-700">
+        <span class="font-medium">Color:</span>
+        <input type="color" id="colorPicker" class="w-12 h-8 cursor-pointer border rounded" />
+      </label>
+  
+      <label class="flex items-center gap-2 text-gray-700">
+        <span class="font-medium">Brush Size:</span>
+        <input type="range" id="brushSize" min="1" max="20" value="5" 
+          class="w-40 accent-blue-600 cursor-pointer" />
+      </label>
+  
+      <button id="clearBtn" 
+        class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+        Clear
+      </button>
+
+      <button id="saveBtn" 
+        class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition">
+        Save Drawing
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-6 mt-auto">
+    <p class="text-sm">&copy; 2025 Code With Kids | Built with ❤️ and TailwindCSS</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="./srcipt.js"></script>
+</body>
+</html>
