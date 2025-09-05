@@ -24,7 +24,7 @@
     </h2>
     <p class="text-lg text-gray-600 max-w-xl mb-8">
       Draw, paint, and express yourself on our fun interactive canvas. 
-      Choose colors, change brush sizes, and bring your imagination to life.
+      Choose colors, change brush styles, and bring your imagination to life.
     </p>
     <a href="#app" 
        class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition text-lg">
@@ -36,10 +36,12 @@
   <section id="app" class="flex flex-col items-center justify-center py-16 bg-white shadow-inner rounded-t-3xl">
     <h3 class="text-3xl font-bold text-gray-800 mb-6">Your Canvas</h3>
 
+    <!-- Canvas -->
     <canvas id="canvas" width="600" height="400" 
       class="border-4 border-gray-700 rounded-lg shadow-lg bg-white cursor-crosshair">
     </canvas>
     
+    <!-- Controls -->
     <div class="controls mt-6 flex flex-wrap justify-center items-center gap-6">
       <label class="flex items-center gap-2 text-gray-700">
         <span class="font-medium">Color:</span>
@@ -48,7 +50,7 @@
   
       <label class="flex items-center gap-2 text-gray-700">
         <span class="font-medium">Brush Size:</span>
-        <input type="range" id="brushSize" min="1" max="20" value="5" 
+        <input type="range" id="brushSize" min="1" max="30" value="5" 
           class="w-40 accent-blue-600 cursor-pointer" />
       </label>
   
@@ -62,14 +64,20 @@
         Save Drawing
       </button>
     </div>
+
+    <!-- Brush Styles -->
+    <div class="flex flex-wrap justify-center gap-3 mt-6">
+      <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition" data-brush="normal">Normal</button>
+      <button class="px-4 py-2 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-white rounded shadow hover:opacity-90 transition" data-brush="rainbow">Rainbow</button>
+      <button class="px-4 py-2 bg-purple-600 text-white rounded shadow hover:bg-purple-700 transition" data-brush="neon">Neon Glow</button>
+      <button class="px-4 py-2 bg-gray-700 text-white rounded shadow hover:bg-gray-800 transition" data-brush="dotted">Dotted</button>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-blue-700 text-white text-center py-6 mt-auto">
-    <p class="text-sm">&copy; 2025 Code With Kids | Built with ❤️ and TailwindCSS</p>
+    <p class="text-sm">&copy; 2025 Code With Kids</p>
   </footer>
-
-  <!-- Script -->
   <script src="./srcipt.js"></script>
 </body>
 </html>
